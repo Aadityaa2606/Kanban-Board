@@ -76,7 +76,7 @@ const KanbanTicket = ({ ticket, type, user }) => {
             <p>{getPriorityIcon(ticket.priority)}</p>
             <div className="aligner">
               <div className="grey-circle" />
-              <p>{ticket.tag.join(", ")}</p>
+              <p className="ticket">{ticket.tag.join(", ")}</p>
             </div>
           </div>
         </>
@@ -95,7 +95,7 @@ const KanbanTicket = ({ ticket, type, user }) => {
             <p>{getPriorityIcon(ticket.priority)}</p>
             <div className="aligner">
               <div className="grey-circle" />
-              <p>{ticket.tag.join(", ")}</p>
+              <p className="ticket">{ticket.tag.join(", ")}</p>
             </div>
           </div>
         </>
@@ -125,32 +125,13 @@ const KanbanTicket = ({ ticket, type, user }) => {
           <div className="bottom-container">
             <div className="aligner">
               <div className="grey-circle" />
-              <p>{ticket.tag.join(", ")}</p>
+              <p className="ticket">{ticket.tag.join(", ")}</p>
             </div>
           </div>
         </div>
       )}
     </div>
   );
-};
-
-KanbanTicket.propTypes = {
-  ticket: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    tag: PropTypes.arrayOf(PropTypes.string).isRequired,
-    userId: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-      .isRequired,
-    priority: PropTypes.number.isRequired,
-    status: PropTypes.string.isRequired,
-  }).isRequired,
-  type: PropTypes.string.isRequired,
-  user: PropTypes.shape({
-    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    name: PropTypes.string.isRequired,
-    available: PropTypes.bool.isRequired,
-    profilePic: PropTypes.string.isRequired,
-  }).isRequired,
 };
 
 export default KanbanTicket;
