@@ -1,0 +1,122 @@
+.kanban-ticket {
+  border: 0.5px solid #f4f4f4;
+  border-radius: 10px;
+  width: 450px;
+  padding: 10px 20px 10px 20px;
+  box-sizing: border-box;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1600px) {
+  .kanban-ticket {
+    width: 250px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .kanban-ticket {
+    width: 100%; 
+  }
+}
+
+.user-info {
+  position: relative;
+}
+
+.user-profile-picture {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.availability-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.available {
+  background-color: #4caf50;
+}
+
+.not-available {
+  background-color: #f44336;
+}
+
+.grey-circle {
+  background-color: #ccc;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: 10px;
+}
+
+.priority .grey-circle {
+  margin-left: 0px;
+}
+
+.status .top-row {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-id {
+  color: #666;
+}
+
+.ticket-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  margin-bottom: 0;
+}
+
+
+.aligner {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.middle-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: auto;
+  flex-grow: 1;
+  align-items: self-start;
+}
+
+.bottom-container {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  bottom: 0;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-icon {
+  height: 15px;
+  width: auto;
+  margin-top: 4px;
+}

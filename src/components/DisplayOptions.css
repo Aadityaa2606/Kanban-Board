@@ -1,0 +1,65 @@
+.display-btn {
+  border: 1px solid #c2c1c1;
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.modal-container {
+  position: fixed;
+  top: 3.5rem;
+  left: 1rem;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: white;
+  padding: 20px 20px 10px 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(179, 179, 179, 0.2);
+  border: 1px solid #ccc;
+}
+
+/* Label and Select styling */
+.option {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #6e6b6b;
+  font-size: 0.9rem;
+}
+
+.option label {
+  display: block;
+  margin-bottom: 5px;;
+}
+
+.option select {
+  width: 150px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: transparent;
+  color: black;
+  font-size: 0.9rem;
+  appearance: none;
+  background: url('../assets/down.svg') no-repeat right 10px center;
+  background-size: 20px;
+
+}
+
+.option select:focus {
+  outline: none;
+}

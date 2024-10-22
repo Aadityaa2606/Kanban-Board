@@ -1,0 +1,56 @@
+.col-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    min-width: 400px;
+}
+
+.left-section {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.right-section {
+    display: flex;
+    gap: 10px;
+    margin-right: 5px;
+}
+
+.cta-icons {
+    width: 20px;
+    height: auto;
+}
+
+.ticket-count {
+    color: #666;
+}
+
+.user-info {
+  position: relative;
+}
+
+.user-profile-picture {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.availability-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.available {
+  background-color: #4caf50;
+}
+
+.not-available {
+  background-color: #f44336;
+}
