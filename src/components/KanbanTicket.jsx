@@ -16,17 +16,23 @@ import "./KanbanTicket.css";
 const KanbanTicket = ({ ticket, type, user }) => {
   // Function to get priority icon based on ticket priority
   const getPriorityIcon = (priority) => {
+    const getIcon = (src, alt) => (
+      <div className="priority-icon">
+        <img src={src} alt={alt} />
+      </div>
+    );
+
     switch (priority) {
       case 4:
-        return <img src={UrgentPriorityIcon} alt="Urgent" />;
+        return getIcon(UrgentPriorityIcon, "Urgent");
       case 3:
-        return <img src={HighPriorityIcon} alt="High" />;
+        return getIcon(HighPriorityIcon, "High");
       case 2:
-        return <img src={MediumPriorityIcon} alt="Medium" />;
+        return getIcon(MediumPriorityIcon, "Medium");
       case 1:
-        return <img src={LowPriorityIcon} alt="Low" />;
+        return getIcon(LowPriorityIcon, "Low");
       default:
-        return <img src={NoPriorityIcon} alt="No Priority" />;
+        return getIcon(NoPriorityIcon, "No Priority");
     }
   };
 
